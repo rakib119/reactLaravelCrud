@@ -18,13 +18,16 @@ export const ContextProvider = ({children}) =>{
             localStorage.removeItem('ACCESS_TOKEN');
         }
     }
-    <SateContext.Provider value={{
-        user,
-        token,
-        setUser,
-        setToken
-    }}>
-        {children}
-    </SateContext.Provider>
+    return (
+        <SateContext.Provider value={{
+            user,
+            token,
+            setUser,
+            setToken
+        }}>
+            {children}
+        </SateContext.Provider>
+    );
+
 }
 export const useSateContext = () =>  useContext(SateContext);
