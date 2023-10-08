@@ -1,8 +1,14 @@
 import React from 'react'
-import { Outlet } from 'react-router-dom'
+import { Navigate, Outlet } from 'react-router-dom'
+import { useSateContext } from '../../context/ContextProvider'
 
 const DefaultLayout = () => {
-  return (
+    const {token,user} = useSateContext();
+    if (!token) {
+        return <Navigate to='/login' />
+    }
+    return (
+
     <div>
         DefaultLayout
         <Outlet/>
