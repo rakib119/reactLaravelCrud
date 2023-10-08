@@ -27,4 +27,4 @@ export const ContextProvider = ({children}) =>{
         {children}
     </SateContext.Provider>
 }
-export useSateContext = () =>  useContext(SateContext);
+export const useSateContext = () =>  useContext(SateContext);
