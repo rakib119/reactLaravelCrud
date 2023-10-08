@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useContext, useState } from "react";
 const SateContext = createContext({
     token : null,
     user : null,
@@ -27,3 +27,4 @@ export const ContextProvider = ({children}) =>{
         {children}
     </SateContext.Provider>
 }
+export useSateContext = () =>  useContext(SateContext);
