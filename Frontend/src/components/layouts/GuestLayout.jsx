@@ -4,6 +4,7 @@ import { useSateContext } from '../../context/ContextProvider'
 
 const GuestLayout = () => {
     const {token} = useSateContext();
+    // debugger;
     if (token) {
         return <Navigate to='/'/>
 

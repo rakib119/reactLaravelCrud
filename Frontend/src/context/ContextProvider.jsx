@@ -8,9 +8,11 @@ const SateContext = createContext({
 // Create provider
 export const ContextProvider = ({children}) =>{
     //initilize useState
-    const [user,setUser] = useState({});
-    const [token,_setToken] = useState(localStorage.getItem('ACCESS_TOKEN'));
-    // const [token,_setToken] = useState(1234);
+    const [user,setUser] = useState({
+        name:"Rakib"
+    });
+    // const [token,_setToken] = useState(localStorage.getItem('ACCESS_TOKEN'));
+    const [token,_setToken] = useState(1234);
     const setToken = (token) => {
         _setToken(token);
         if(token){
